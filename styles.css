@@ -1,22 +1,20 @@
+/* Global Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #4b4a4b;
-    color: #ffffff;
+    background-color: #f5f5f5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header, footer {
-    background-color:#0e0d0d ;
+    background-color: #333;
     color: white;
     text-align: center;
     padding: 1rem 0;
-}
-
-.header {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 20px;
 }
 
 nav {
@@ -25,45 +23,28 @@ nav {
 }
 
 nav a {
-    color: white;
+    color: #fff;
     margin: 0 1rem;
     text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-section {
-    padding: 2rem;
-    background-color: #000000;
-    margin: 1rem 0;
+nav a:hover {
+    background-color: #ff69b4;
+    color: white;
 }
 
-.about-me {
-    background-color: #292626;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px #464444;
-    text-align: center;
+hr {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin: 2rem 0;
 }
 
-.about-me h1 {
-    margin-bottom: 20px;
-    font-size: 2em;
-    color: #ffffff;
-}
-
-.about-me p {
-    margin: 10px 0;
-    line-height: 1.6;
-    color: #ffffff;
-}
-
-.button-container1 {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-}
-
-.button {
-    background-color: #27AE60;
+button, .button {
+    background-color: #ff69b4;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -72,55 +53,206 @@ section {
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
+    display: inline-block;
+    margin: 1rem auto;
 }
 
-.project img{
-    width: 100%;
-    max-width: 200px;
-    height: auto;
+button:hover, .button:hover {
+    background-color: #ff1493;
+    transform: scale(1.05);
 }
 
-.project {
-    margin-bottom: 1rem;
+.button-container {
+    text-align: center;
+    margin: 1rem 0;
 }
 
-.container2 {
+footer {
+    margin-top: auto;
+    padding: 1rem 0;
+}
+
+footer p {
+    margin: 1rem 0;
+}
+
+/* Footer specific styles */
+.footer-content {
     display: flex;
-    justify-content: space-around;
-    margin: 50px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
 }
 
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: #1b1b1b;
+.footer-left, .footer-right {
+    margin: 0 1rem;
+}
+
+/* Homepage Styles */
+.intro-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 2rem;
+    background-color: #fff;
+    margin: 1rem 0;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    color: rgb(255, 255, 255);
-}
-.contact-form label {
-    display: block;
-    margin-bottom: 0.5rem;
-}
-.contact-form input, .contact-form textarea {
-    width: 100%;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.intro-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.intro-text {
+    margin-bottom: 1rem;
+}
+
+.intro-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ff69b4;
+}
+
+.intro-section p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+.role {
+    font-size: 1.25rem;
+    color: #ff69b4;
+}
+
+.intro-image .avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #ff69b4;
+}
+
+.about-me {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.about-me h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #333;
+}
+
+.about-me p {
+    margin: 10px 0;
+    line-height: 1.6;
+    color: #555;
+}
+
+.projects-preview {
+    padding: 2rem;
+    margin: 1rem 0;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.projects-preview h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #ff69b4;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 250px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Projects Page Styles */
+.projects-section {
+    padding: 2rem;
+    margin: 1rem 0;
+    text-align: center;
+    flex: 1;
+}
+
+.projects-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.project-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #ff69b4;
+}
+
+.project-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Resume Page Styles */
+.resume-section {
+    padding: 2rem;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.resume-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
 
 .skills-container {
     width: 80%;
     max-width: 600px;
-    background-color: #1b1b1b;
+    background-color: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px #252525;
-    
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
 }
 
 .skill {
@@ -134,7 +266,7 @@ section {
 }
 
 .progress-bar {
-    background-color: #464444;
+    background-color: #eee;
     border-radius: 4px;
     overflow: hidden;
     position: relative;
@@ -142,7 +274,7 @@ section {
 }
 
 .progress {
-    background-color: #27AE60;
+    background-color: #ff69b4;
     height: 100%;
     width: 0;
     transition: width 1s ease;
@@ -155,20 +287,50 @@ section {
     top: 50%;
     transform: translateY(-50%);
     font-weight: bold;
-    color: #ffffff;
+    color: #555;
 }
 
-.box {
-    background-color: #292626;
-    padding: 20px;
-    margin: 10px;
-    box-shadow: 0 0 10px #464444;
-    width: 45%;
-    border-radius: 5px;
-}
-
-h3 {
+.contact-section {
+    padding: 2rem;
+    background-color: #fff;
+    margin: 1rem 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
-    color: #ffffff;
 }
 
+.contact-section h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #ff69b4;
+    outline: none;
+}
